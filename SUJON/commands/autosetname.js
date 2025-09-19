@@ -32,7 +32,7 @@ module.exports.run = async function  ({ event, api, args, permssionm, Users })  
             thisThread.nameUser.push(content);
             const name = (await Users.getData(event.senderID)).name
             writeFileSync(pathData, JSON.stringify(dataJson, null, 4), "utf-8");
-            api.sendMessage(`Configure a successful new member name\nPreview: ${content} ${name}`, threadID, messageID);
+            api.sendMessage(` Configure a successful new member name\nPreview: ${content} ${name}`, threadID, messageID);
             break;
         }
         case "rm":
